@@ -1,0 +1,6 @@
+cd /
+cd /root/vani
+docker stop helloworld
+docker rm helloworld
+docker build -t hello-world /root/vani
+docker run -d --name helloworld -p 80:80 -v /root/vani/src/ :/var/www/html hello-world
